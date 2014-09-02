@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour {
 	public AudioClip m_GameStartSound;
 	public GameObject m_TrainPrefab;
 	public GameObject m_PlayerPrefab;
+	public GameObject m_ProtectorsPrefab;
 	private List<Player> m_Players;
 	private Banks m_Banks;
 	private TrainColor m_PlayerPlacingColor;
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour {
 	public void BeginGame(int players = 0)
 	{
 		GameObject.FindObjectOfType<Editor>().DeSerializeHexes();
+		GameObject.Instantiate(m_ProtectorsPrefab);
 		audio.PlayOneShot(m_GameStartSound);
 		GameGUI.instance.PlayBGM();
 		m_Banks = Banks.instance;

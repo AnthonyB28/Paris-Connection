@@ -26,8 +26,8 @@ public class Server : MonoBehaviour {
 	{
 		MasterServer.ipAddress = m_ServerIP;
 		MasterServer.port = m_ServerPort;
-		Network.natFacilitatorIP = m_ServerIP;
-		Network.natFacilitatorPort = m_NATPort;
+		/*Network.natFacilitatorIP = m_ServerIP;
+		Network.natFacilitatorPort = m_NATPort;*/
 	}
 
 	// Use this for initialization
